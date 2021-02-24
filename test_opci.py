@@ -92,27 +92,6 @@ def test_power_sensors(model, capsys):
     assert passed, "test failed"
 
 
-@pytestrail.case('C18345')
-@pytest.mark.sanity
-@pytest.mark.smoke
-@pytest.mark.debug
-def test_reboot():
-    cmdReboot = "curl -i -H \"Content-Type: application/json\" -X POST -d '{\"reboot\": true}' \
-    http://127.0.0.1:5000/sysinfo/powercycle"
-    ssh_client.execute(cmdReboot)
-    time.sleep(5)
-    if ssh_client.is_alive():
-        assert False
-    else:
-        start = time.time()
-        while not ssh_client.revive():
-            time.sleep(2)
-            end = time.time()
-            if (end - start) > 300:          # 5 minutes maximum to wait
-                break
-        assert ssh_client.is_alive()
-
-
 # @pytestrail.case('C1')
 @pytest.mark.sanity
 @pytest.mark.smoke
@@ -255,7 +234,7 @@ def test_brightness():
         if result == Results.failed:
             pytest.fail("User found it failed")
 
-@pytestrail.case('C18343', '18344')
+@pytestrail.case('C18343', 'C18344')
 @pytest.mark.sanity
 @pytest.mark.smoke
 @pytest.mark.debug
@@ -272,6 +251,7 @@ def test_Sensors(model, capsys):
 
 
 @pytestrail.case('C5310')
+@pytest.mark.skip
 @pytest.mark.hw
 #@pytest.mark.debug
 def test_mac():
@@ -293,5 +273,27 @@ def test_cputemp():
     print(r['out'])
     print("Please check the temperatures are normal")
     assert r['retval'] == 0
+
+
+@pytestrail.case('C18345')
+@pytest.mark.sanity
+@pytest.mark.smoke
+@pytest.mark.debug
+def test_reboot():			# put it to the last, otherwise a not comletely finished reboot may affect other test cases
+    cmdReboot = "curl -i -H \"Content-Type: application/json\" -X POST -d '{\"reboot\": true}' \
+    http://127.0.0.1:5000/sysinfo/powercycle"
+    ssh_client.execute(cmdReboot)
+    time.sleep(5)
+    if ssh_client.is_alive():
+        assert False
+    else:
+        start = time.time()
+        while not ssh_client.revive():
+            time.sleep(2)
+            end = time.time()
+            if (end - start) > 300:          # 5 minutes maximum to wait
+                break
+        assert ssh_client.is_alive()
+
 
 

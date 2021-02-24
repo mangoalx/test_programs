@@ -40,31 +40,33 @@ eu2iPowerLimits = {'12V': {'Voltage': {'Min': 11500, 'Max': 12500}, 'Current': {
                    # 'reddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
                    'PRT-24V': {'Voltage': {'Min': 22800, 'Max': 25200}, 'Current': {'Min': 5000, 'Max': 25000}, 'Power': {'Min': 20000000, 'Max': 500000000}}
                    }
-cc48PowerLimits = {'12V': {'Voltage': {'Min': 11500, 'Max': 12500}, 'Current': {'Min': 1200, 'Max': 2500}, 'Power': {'Min': 12000000, 'Max': 30000000}},
+cc48PowerLimits = {'10V': {'Voltage': {'Min': 11500, 'Max': 12500}, 'Current': {'Min': 400, 'Max': 500}, 'Power': {'Min': 4800000, 'Max': 6000000}},
                    '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2800}, 'Power': {'Min': 4000000, 'Max': 14000000}},
-                   '24V': {'Voltage': {'Min': 22800, 'Max': 25200}, 'Current': {'Min': 800, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
-                   # 'reddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
-                   'PRT-24V': {'Voltage': {'Min': 22800, 'Max': 25200}, 'Current': {'Min': 5000, 'Max': 25000}, 'Power': {'Min': 20000000, 'Max': 500000000}}
+                   '24V': {'Voltage': {'Min': 22800, 'Max': 25200}, 'Current': {'Min': 2000, 'Max': 4000}, 'Power': {'Min': 48000000, 'Max': 100000000}},
+                   'leddriver_left_side': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
+                   'leddriver_right_side': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
+                   'TCON-12V': {'Voltage': {'Min': 11000, 'Max': 13500}, 'Current': {'Min': 250, 'Max': 400}, 'Power': {'Min': 3000000, 'Max': 5000000}}
                    }
-qsmiPowerLimits = {'10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 200, 'Max': 600}, 'Power': {'Min': 2000000, 'Max': 6000000}},
+qsmiPowerLimits = {'10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 300, 'Max': 800}, 'Power': {'Min': 2500000, 'Max': 8000000}},
                    '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2000}, 'Power': {'Min': 4000000, 'Max': 10000000}},
                    '24V': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1500, 'Max': 3000}, 'Power': {'Min': 24000000, 'Max': 70000000}},
+                   'DPC-10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 150, 'Max': 350}, 'Power': {'Min': 1500000, 'Max': 3500000}},
+                   'leddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}}
+                   }
+tsmiPowerLimits = {'10V': {'Voltage': {'Min': 11500, 'Max': 12500}, 'Current': {'Min': 350, 'Max': 680}, 'Power': {'Min': 3600000, 'Max': 8400000}},
+                   '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2000}, 'Power': {'Min': 4000000, 'Max': 8000000}},
+                   '24V': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1500, 'Max': 3000}, 'Power': {'Min': 24000000, 'Max': 70000000}},
+                   'TCON-12V': {'Voltage': {'Min': 11000, 'Max': 13500}, 'Current': {'Min': 50, 'Max': 200}, 'Power': {'Min': 600000, 'Max': 2400000}},
                    # 'reddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
                    'leddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}}
                    }
-tsmiPowerLimits = {'10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 200, 'Max': 500}, 'Power': {'Min': 2000000, 'Max': 5000000}},
-                   '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2000}, 'Power': {'Min': 4000000, 'Max': 8000000}},
+r211PowerLimits = {'10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 500, 'Max': 900}, 'Power': {'Min': 5000000, 'Max': 10000000}},
+                   '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2500}, 'Power': {'Min': 4000000, 'Max': 12000000}},
                    '24V': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1500, 'Max': 3000}, 'Power': {'Min': 24000000, 'Max': 70000000}},
                    # 'reddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
                    'leddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}}
                    }
-r211PowerLimits = {'10V': {'Voltage': {'Min': 9500, 'Max': 10500}, 'Current': {'Min': 200, 'Max': 500}, 'Power': {'Min': 2000000, 'Max': 5000000}},
-                   '5V': {'Voltage': {'Min': 4750, 'Max': 5250}, 'Current': {'Min': 800, 'Max': 2000}, 'Power': {'Min': 4000000, 'Max': 8000000}},
-                   '24V': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1500, 'Max': 3000}, 'Power': {'Min': 24000000, 'Max': 70000000}},
-                   # 'reddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}},
-                   'leddriver': {'Voltage': {'Min': 21600, 'Max': 26200}, 'Current': {'Min': 1000, 'Max': 2000}, 'Power': {'Min': 20000000, 'Max': 50000000}}
-                   }
-model_limits = {'qsmi': qsmiPowerLimits, '3smi': tsmiPowerLimits, '8u2i': eu2iPowerLimits, 'r211': r211PowerLimits, 'cc48': cc48PowerLimits}
+model_limits = {'qsmi': qsmiPowerLimits, '3smi': tsmiPowerLimits, '8u2i': eu2iPowerLimits, 'r211': r211PowerLimits, 'cc48smi': cc48PowerLimits}
 # Function to compare if the data are in range
 
 
@@ -231,5 +233,5 @@ Model_sensors = {'qsmi': ["ALS", "temperatureHumidity", "accelerometer", "temper
                  '3smi': ["ALS", "temperatureHumidity", "accelerometer", "temperature"], \
                  '8u2i': ["ALS", "temperatureHumidity", "accelerometer"], \
                  'r211': ["temperatureHumidity", "accelerometer", "temperature"], \
-                 'cc48': ["ALS", "temperatureHumidity", "accelerometer", "temperature"]}
+                 'cc48smi': ["ALS", "temperatureHumidity", "accelerometer", "temperature"]}
 
